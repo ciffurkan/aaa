@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diritto all'Oblio - Il Caso Serena Fleites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header class="top-bar">
+            <h1>Diritto all'Oblio</h1>
+            <div class="subtitle">Il Caso Serena Fleites</div>
+        </header>
+
+        <!-- Track Selector -->
+        <nav class="track-selector">
+            <button class="track-btn active" data-src="audio1.mp3" data-track="1">Audio 1</button>
+            <button class="track-btn" data-src="audio2.mp3" data-track="2">Audio 2</button>
+            <button class="track-btn" data-src="audio3.mp3" data-track="3">Audio 3</button>
+            <button class="track-btn" data-src="audio4.mp3" data-track="4">Audio 4</button>
+        </nav>
+
+        <!-- The "Stage" where visuals appear -->
+        <section id="stage" class="visual-stage">
+            <!-- Dynamic content will be injected here by JS -->
+            <div id="visual-content" class="content-layer"></div>
+        </section>
+
+        <!-- Audio Player Control -->
+        <footer class="player-controls">
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <div class="controls-row">
+                <span id="current-time">00:00</span>
+                <button id="play-pause-btn" class="play-btn">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-play">
+                        <path d="M8 5v14l11-7z" fill="currentColor" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-pause hidden">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor" />
+                    </svg>
+                </button>
+                <span id="duration-time">00:00</span>
+            </div>
+
+            <audio id="main-audio">
+                <source src="audio1.mp3" type="audio/mpeg">
+                Il tuo browser non supporta l'elemento audio.
+            </audio>
+        </footer>
+
+        <!-- Presentation Section -->
+        <section class="presentation-section">
+            <h2>Il Diritto all'Oblio nell'Era Digitale</h2>
+
+            <!-- Introduzione -->
+            <article class="info-card">
+                <h3>📖 Introduzione: Il Nuovo Confine tra Memoria e Dignità</h3>
+                <p>L'avvento di Internet e dell'era digitale ha <strong>invertito l'ordinario rapporto tra memoria e
+                        dimenticanza</strong>, rendendo il ricordo la regola e l'oblio l'eccezione <span
+                        class="citation">(Barbaro, 2024)</span>.</p>
+                <p>Il web ha creato una memoria collettiva illimitata e senza tempo, un deposito di dati globali dove
+                    tutto ciò che viene pubblicato rischia di diventare eterno. In questo panorama, il diritto all'oblio
+                    emerge come uno strumento fondamentale per bilanciare la memoria digitale perpetua con il diritto
+                    alla privacy, alla dignità personale e alla possibilità di una <strong>seconda opportunità</strong>
+                    <span class="citation">(Pancallo, 2018)</span>.
+                </p>
+            </article>
+
+            <!-- Capitolo 1 -->
+            <article class="info-card">
+                <h3>🎯 Capitolo 1: Definizione e Contesto</h3>
+                <h4>1.1 Natura e Definizione del Diritto</h4>
+                <p>Il diritto all'oblio è il <strong>diritto soggettivo</strong> di una persona a non restare esposta
+                    indefinitamente alle conseguenze negative derivanti dalla diffusione di notizie o fatti del passato
+                    che hanno perso la loro attualità e rilevanza pubblica <span class="citation">(Pancallo, 2018;
+                        Wikipedia, 2025)</span>.</p>
+                <p>La Corte di Cassazione italiana lo ha definito come il <em>"giusto interesse di ogni persona a non
+                        restare indeterminatamente esposta ai danni ulteriori che arreca al suo onore e alla sua
+                        reputazione la reiterata pubblicazione di una notizia in passato legittimamente divulgata"</em>
+                    <span class="citation">(Wikipedia, 2025)</span>.
+                </p>
+
+                <h4>1.2 Gli Attori in Campo</h4>
+                <ul class="actors-list">
+                    <li><strong>Interessato:</strong> La persona che richiede la rimozione o deindicizzazione</li>
+                    <li><strong>Motori di Ricerca:</strong> Google, Bing, ecc. come "titolari del trattamento"</li>
+                    <li><strong>Editori/Piattaforme:</strong> Siti web, social media, testate giornalistiche</li>
+                    <li><strong>Autorità Garanti:</strong> Garante Privacy, Corti di Giustizia</li>
+                </ul>
+            </article>
+
+            <!-- Capitolo 2 -->
+            <article class="info-card">
+                <h3>⚖️ Capitolo 2: Meccanismi Giuridici, Tecnici e Sociali</h3>
+
+                <h4>2.1 Il "Come" Giuridico: Dalla Sentenza Google Spain al GDPR</h4>
+                <div class="legal-timeline">
+                    <div class="timeline-item">
+                        <span class="year">2014</span>
+                        <div class="content">
+                            <strong>Sentenza Google Spain (C-131/12)</strong>
+                            <p>La Corte di Giustizia UE stabilisce che i motori di ricerca sono "titolari del
+                                trattamento" dei dati e devono rispondere alle richieste di deindicizzazione <span
+                                    class="citation">(De Santis, 2014)</span>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2018</span>
+                        <div class="content">
+                            <strong>GDPR - Articolo 17</strong>
+                            <p>Il Regolamento Europeo codifica il "diritto alla cancellazione" includendo casi come:
+                                ritiro del consenso, dati non più necessari, opposizione al trattamento, trattamento
+                                illecito <span class="citation">(Intersoft Consulting, 2014)</span>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2019</span>
+                        <div class="content">
+                            <strong>Sentenza C-507/17</strong>
+                            <p>La deindicizzazione si applica alle versioni europee dei motori di ricerca (es.
+                                google.it, .fr, .de), non a livello globale come google.com <span
+                                    class="citation">(European Union, 2022)</span>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2022</span>
+                        <div class="content">
+                            <strong>Riforma Cartabia</strong>
+                            <p>In Italia, introduce tutele specifiche per chi è stato assolto o ha scontato la pena,
+                                rafforzando il diritto all'oblio in ambito penale <span
+                                    class="citation">(DirittoAllOblioInternet.com, 2025)</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>2.2 Deindicizzazione vs. Cancellazione</h4>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <h4>Deindicizzazione</h4>
+                        <p>I risultati non appaiono più nelle ricerche associate al nome della persona, ma il contenuto
+                            originale <strong>rimane online</strong>. È lo strumento principale offerto dai motori di
+                            ricerca <span class="citation">(Biondini, 2025)</span>.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Cancellazione</h4>
+                        <p>Il contenuto viene <strong>rimosso definitivamente</strong> dalla fonte originale. Richiede
+                            azione diretta sul sito ospitante o ordine giudiziario.</p>
+                    </div>
+                </div>
+
+                <h4>2.3 Il "Come" Sociale: Casi Speciali</h4>
+                <p>Esistono eccezioni significative: i <strong>personaggi pubblici</strong> godono di tutele ridotte per
+                    le informazioni relative al loro ruolo. Le piattaforme hanno sviluppato modelli di business basati
+                    sulla "reputation management" <span class="citation">(La Voce Di Asti, 2025)</span>.</p>
+            </article>
+
+            <!-- Capitolo 3 -->
+            <article class="info-card">
+                <h3>💭 Capitolo 3: Implicazioni e Dilemmi Etici</h3>
+
+                <h4>3.1 Impatto sull'Individuo</h4>
+                <p>Il diritto all'oblio tutela la <strong>dignità</strong> e offre una <strong>seconda
+                        opportunità</strong>. Permette agli individui di ricostruire la propria identità sociale
+                    esercitando una sorta di "autodeterminazione informativa" <span class="citation">(Pancallo,
+                        2018)</span>.</p>
+
+                <h4>3.2 Impatto sulla Società</h4>
+                <p>Esiste una tensione tra la protezione individuale e la <strong>memoria collettiva</strong>. Un uso
+                    eccessivo potrebbe portare a una sorta di "amnesia digitale" che compromette il controllo
+                    democratico <span class="citation">(Lonardo, 2021)</span>.</p>
+
+                <h4>3.3 Il Dilemma Etico Centrale</h4>
+                <p class="highlight-box">Al cuore della questione vi è lo <strong>scontro tra due diritti
+                        fondamentali</strong>:</p>
+                <ul class="ethics-list">
+                    <li><strong>Diritto alla Privacy, alla Dignità e all'Identità Dinamica:</strong> Il diritto di non
+                        essere definiti per sempre da un singolo episodio del passato, di poter evolvere, cambiare e
+                        redimersi.</li>
+                    <li><strong>Diritto all'Informazione e alla Libertà di Espressione:</strong> Il diritto della
+                        società a conservare la conoscenza dei fatti, a esercitare un controllo democratico e a basare
+                        il dibattito pubblico su informazioni complete.</li>
+                </ul>
+                <p>Non esiste una risposta universale. La soluzione deve essere trovata in un <strong>bilanciamento caso
+                        per caso</strong>, valutando tempo trascorso, ruolo della persona, attualità dell'interesse
+                    pubblico e natura delle informazioni <span class="citation">(Pancallo, 2018; Lonardo, 2021)</span>.
+                </p>
+            </article>
+
+            <!-- Capitolo 4 -->
+            <article class="info-card">
+                <h3>🚀 Capitolo 4: Prospettive Critiche e Future</h3>
+
+                <h4>4.1 Limiti Attuali e Criticità</h4>
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <span class="challenge-icon">🌍</span>
+                        <h4>Efficacia Geografica</h4>
+                        <p>La deindicizzazione si applica solo alle versioni UE. I dati rimangono accessibili al di
+                            fuori dell'Europa <span class="citation">(European Union, 2022)</span>.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <span class="challenge-icon">🔄</span>
+                        <h4>Effetto "Whac-a-Mole"</h4>
+                        <p>I contenuti ricompaiono su altri siti, nelle cache e negli archivi web.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <span class="challenge-icon">🤖</span>
+                        <h4>Intelligenza Artificiale</h4>
+                        <p>I modelli AI vengono addestrati su dati web. Il "machine unlearning" è un problema
+                            tecnologico ancora irrisolto.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <span class="challenge-icon">⚖️</span>
+                        <h4>Onere sul Singolo</h4>
+                        <p>Il sistema si basa sulla capacità dell'individuo di presentare richieste e ricorsi.</p>
+                    </div>
+                </div>
+
+                <h4>4.2 Proposte per il Futuro</h4>
+                <ol class="future-list">
+                    <li><strong>Armonizzazione Globale:</strong> Promuovere accordi internazionali che estendano i
+                        principi di tutela oltre i confini europei.</li>
+                    <li><strong>Privacy by Design:</strong> Incentivare le piattaforme a integrare la protezione della
+                        privacy fin dalla progettazione dei sistemi.</li>
+                    <li><strong>Ricerca sul Machine Unlearning:</strong> Investire in soluzioni tecniche per una
+                        cancellazione verificabile dai sistemi di IA.</li>
+                    <li><strong>Tutela Rafforzata dei Minori:</strong> Normative specifiche che diano ai minori
+                        strumenti diretti per controllare la propria immagine digitale <span class="citation">(Barbaro,
+                            2024; De Domenico, 2025)</span>.</li>
+                    <li><strong>Educazione Digitale:</strong> Insegnare fin dalla giovane età il valore dei dati
+                        personali e le conseguenze della condivisione online.</li>
+                </ol>
+            </article>
+
+            <!-- Conclusione -->
+            <article class="info-card conclusion-card">
+                <h3>📝 Conclusione</h3>
+                <p>Il diritto all'oblio rappresenta una <strong>risposta necessaria e coraggiosa</strong> a una delle
+                    più grandi distorsioni create dalla rivoluzione digitale: la memoria perpetua e indiscriminata.</p>
+                <p>Non è uno strumento per cancellare la storia, ma per <strong>proteggere il futuro degli
+                        individui</strong>, riconoscendo che l'identità umana è per sua natura dinamica e in evoluzione.
+                </p>
+                <p class="highlight-box">In questo equilibrio delicato tra il <em>diritto a sapere</em> e il <em>diritto
+                        a essere lasciati in pace</em>, si gioca una parte fondamentale della nostra dignità nell'era di
+                    Internet.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
